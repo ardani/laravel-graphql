@@ -36,8 +36,18 @@ class ProductsQuery extends Query
 
     public function resolve($root, $args, SelectFields $fields)
     {
+        $where = function ($query) use ($args) {
+            if (isset($args['id'])) {
+                $query->where('id',$args['id']);
+            }
+
+            if (isset($args['title'])) {
+                $query->where('title','like','%'.$args['email'].'%');
+            }
+        };
         $with = array_keys($fields->getRelations());
         return Product::with($with)
+            ->where($where)
             ->select($fields->getSelect())->paginate();
     }
 }
