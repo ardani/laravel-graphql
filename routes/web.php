@@ -17,9 +17,3 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index');
-
-// graphiql
-/*Route::get(config('graphiql.routes.ui'), [
-    'as' => 'graphiql',
-    'uses' => 'GraphiqlController@index',
-]);*/
