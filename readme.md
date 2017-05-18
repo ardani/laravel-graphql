@@ -1,4 +1,6 @@
 # Sample Integrate Laravel With GraphQL
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ardani/laravel-graphql.svg)](https://greenkeeper.io/)
 GraphQL is a query language for your API, and a server-side runtime for executing queries by using a type system you define for your data
 
 this is sample how to integrating Graphql with laravel, for full documentation you can check
