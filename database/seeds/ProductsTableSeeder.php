@@ -24,7 +24,7 @@ class ProductsTableSeeder extends Seeder
             ]);
             $loop = rand(2, 3);
             for ($j = 1; $j <= $loop; $j++) {
-                $product->product_image()->create([
+                $product->product_images()->create([
                     'image' => $faker->imageUrl()
                 ]);
             }

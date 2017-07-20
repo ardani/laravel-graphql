@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
                 'email' => $faker->email,
                 'password' => bcrypt('secret'),
             ]);
-            $user->profile()->create([
+            $user->user_profiles()->create([
                 'first_name' => $faker->firstName,
                 'last_name' => $faker->lastName,
                 'avatar' => $faker->imageUrl()
