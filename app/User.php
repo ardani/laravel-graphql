@@ -33,7 +33,7 @@ class User extends Authenticatable
         return $this->hasMany(Product::class);
     }
 
-    public function user_profiles()
+    public function profile()
     {
         return $this->hasOne(UserProfile::class);
     }
