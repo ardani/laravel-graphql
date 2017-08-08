@@ -9,9 +9,9 @@
         "barryvdh/laravel-cors": "^0.9.2",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
+        "noh4ck/graphiql": "dev-master",
         "rebing/graphql-laravel": "dev-master",
-        "tymon/jwt-auth": "^0.5.11",
-        "noh4ck/graphiql": "dev-master"
+        "tymon/jwt-auth": "^0.5.12"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

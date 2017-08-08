@@ -178,7 +178,9 @@ return [
         Barryvdh\Cors\ServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Rebing\GraphQL\GraphQLServiceProvider::class,
-        Graphiql\GraphiqlServiceProvider::class
+        Graphiql\GraphiqlServiceProvider::class,
+        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class
+
     ],
 
     /*
@@ -227,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
-        'GraphQL' => Rebing\GraphQL\Support\Facades\GraphQL::class
+        'GraphQL' => Rebing\GraphQL\Support\Facades\GraphQL::class,
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class
     ],
 ];
