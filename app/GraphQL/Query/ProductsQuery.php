@@ -30,6 +30,14 @@ class ProductsQuery extends Query
             'title' => [
                 'name' => 'title',
                 'type' => Type::string()
+            ],
+            'limit' => [
+                'name' => 'limit',
+                'type' => Type::int()
+            ],
+            'page' => [
+                'name' => 'page',
+                'type' => Type::int()
             ]
         ];
     }
@@ -42,12 +50,12 @@ class ProductsQuery extends Query
             }
 
             if (isset($args['title'])) {
-                $query->where('title','like','%'.$args['email'].'%');
+                $query->where('title','like','%'.$args['title'].'%');
             }
         };
         $with = array_keys($fields->getRelations());
         return Product::with($with)
             ->where($where)
-            ->select($fields->getSelect())->paginate();
+            ->select($fields->getSelect())->paginate($args['limit'], ['*'], 'page', $args['page']);
     }
 }
